@@ -1,0 +1,45 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.env
+.venv/
+venv/
+
+# ======================
+# Data / Databases
+# ======================
+data/*.duckdb
+data/*.db
+data/*.csv
+
+# (tieni SOLO CSV di esempio se vuoi, rinominali example_*.csv)
+
+# ======================
+# Streamlit
+# ======================
+.streamlit/
+
+# ======================
+# OS / IDE
+# ======================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ======================
+# Logs / Temp
+# ======================
+*.log
+*.tmp
+
+# ======================
+# Secrets
+# ======================
+.env
+*.env
