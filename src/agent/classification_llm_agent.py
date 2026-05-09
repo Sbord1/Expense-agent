@@ -31,7 +31,7 @@ class LLMClassificationAgent(Agent):
         Amount: {amount}
 
         Categories:
-        Food, Transport, Rent, Subscriptions, Utilities, Shopping, Leisure, Other
+        Food, Transport, Rent, Subscriptions, Utilities, Shopping, Leisure, Income, Healthcare, Education, Other
 
         Return JSON:
         {{
@@ -52,4 +52,5 @@ class LLMClassificationAgent(Agent):
             "category": result["category"],
             "confidence": result["confidence"],
             "source": "llm",
+            "reason": "llm_reasoning",
         }

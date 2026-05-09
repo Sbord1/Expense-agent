@@ -4,7 +4,7 @@ import duckdb
 CSV_PATH = "data/revolut.csv"
 DB_PATH = "data/expenses.duckdb"
 
-df = pd.read_csv(CSV_PATH, sep=';')
+df = pd.read_csv(CSV_PATH, sep=None, engine="python")
 
 df = df.rename(columns={
     "Data di completamento": "date",

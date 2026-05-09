@@ -30,11 +30,16 @@ def generate_insights() -> List[Dict[str, Any]]:
     if df.empty:
         return []
 
+    # Only use expense transactions for spending insights.
+    spending_df = df[df["amount"] < 0].copy()
+    if spending_df.empty:
+        return []
+
     insights = []
 
-    insights += detect_monthly_spike(df)
-    insights += detect_category_outliers(df)
-    insights += detect_recurring_high_spend(df)
+    insights += detect_monthly_spike(spending_df)
+    insights += detect_category_outliers(spending_df)
+    insights += detect_recurring_high_spend(spending_df)
 
     return insights
 
@@ -45,7 +50,8 @@ def generate_insights() -> List[Dict[str, Any]]:
 
 def detect_monthly_spike(df: pd.DataFrame) -> List[Dict[str, Any]]:
     monthly = (
-        df.groupby("month")["amount"]
+        df.assign(amount=df["amount"].abs())
+        .groupby("month")["amount"]
         .sum()
         .reset_index()
         .sort_values("month")

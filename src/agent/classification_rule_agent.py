@@ -1,14 +1,19 @@
+import json
+import os
 from typing import Dict, Any
 from src.agent.base import Agent
 
+RULES_FILE = "data/rules.json"
 
-RULES = {
-    "Subscriptions": ["spotify", "netflix", "prime", "icloud"],
-    "Transport": ["uber", "bolt", "tram", "metro", "bus", "taxi"],
-    "Food": ["restaurant", "ristorante", "bar", "cafe", "pizzeria"],
-    "Shopping": ["amazon", "zalando", "ikea"],
-    "Utilities": ["enel", "eni", "energia", "gas"],
-}
+
+def load_rules() -> Dict[str, list]:
+    if os.path.exists(RULES_FILE):
+        with open(RULES_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+RULES = load_rules()
 
 
 class RuleClassificationAgent(Agent):

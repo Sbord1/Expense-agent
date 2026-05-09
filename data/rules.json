@@ -1,0 +1,12 @@
+{
+  "Income": ["pagamento da", "ricarica", "stipendio", "salary", "retribuzione", "bonifico", "accredito", "deposito", "transfer in"],
+  "Subscriptions": ["spotify", "netflix", "prime", "icloud", "disney", "hbo", "paramount", "apple music", "youtube premium", "amazon prime"],
+  "Transport": ["uber", "bolt", "tram", "metro", "bus", "taxi", "train", "flight", "ryanair", "easyjet", "parking", "fuel", "benzina", "diesel"],
+  "Food": ["restaurant", "ristorante", "bar", "cafe", "pizzeria", "panificio", "mcdonald", "burger king", "starbucks", "coffee", "gelato", "supermarket", "coop", "conad", "lidl", "aldi"],
+  "Shopping": ["amazon", "zalando", "ikea", "mediaworld", "unieuro", "decathlon", "h&m", "zara", "nike", "adidas"],
+  "Utilities": ["enel", "eni", "energia", "gas", "water", "telefono", "tim", "vodafone", "wind", "internet", "electricity"],
+  "Rent": ["affitto", "rent", "casa", "house"],
+  "Leisure": ["cinema", "theatre", "concert", "museum", "park", "gym", "fitness", "spa", "travel", "hotel", "booking"],
+  "Healthcare": ["farmacia", "pharmacy", "doctor", "dentist", "hospital", "medical"],
+  "Education": ["university", "school", "book", "course", "udemy", "coursera"]
+}
